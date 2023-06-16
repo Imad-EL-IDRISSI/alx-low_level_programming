@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 int main() {
     int n;
 
-    // Generate a random number
     srand(time(0));
-    n = rand();
+    n = rand() % RAND_MAX - RAND_MAX / 2;
 
-    printf("The number is: %d\n", n);
+    printf("%d ", n);
 
     if (n > 0) {
         printf("is positive\n");
