@@ -1,8 +1,9 @@
+#!/bin/bash
 #include "main.h"
 
 /**
  *  _puts_recursion(char *s): Function that print a string followed by new line
- * @s is the pointer to the string
+ * @s: is the pointer to the string
  * Return : void
  */
 void _puts_recursion(char *s)
