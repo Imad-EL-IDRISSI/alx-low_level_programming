@@ -9,10 +9,10 @@
 int factorial(int n)
 {
 	if (n < 0)
-		return -1;  /* Factorial is not defined for negative numbers */
+		return (-1);  /* Factorial is not defined for negative numbers */
 	if (n == 0 || n == 1)
-		return 1;  /* Base case: 0! and 1! are both 1 */
+		return (1);  /* Base case: 0! and 1! are both 1 */
 
 	/* Recursively call the function with (n-1) and multiply by n */
-	return n * factorial(n - 1);
+	return (n * factorial(n - 1));
 }
