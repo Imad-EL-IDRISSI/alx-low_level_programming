@@ -2,12 +2,14 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+
  /**
   * last_index - return the last index of a string
   * @s: pointer to string
   *
   * Return: int
   */
+
 int is_palindrome(char *s);
 int check(char *s, int start, int end, int mod);
 int last_index(char *s)
@@ -16,6 +18,7 @@ int last_index(char *s)
 	if (*s > '\0')
 		n += last_index(s + 1) + 1;
 	return (n);
+}
 /**
  * is_palindrome - Checks if a string is a palindrome.
  * @s: The string to check.
