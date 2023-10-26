@@ -13,7 +13,7 @@ int _sqrt_helper(int n, int guess)
 	if (guess * guess == n)
 		return (guess);
 	if (guess * guess < n)
-		return (_sqrt_helper(n, guess + ));
+		return (_sqrt_helper(n, guess + 1));
 	return (-1);
 }
 
