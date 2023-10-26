@@ -4,7 +4,7 @@
 #include <ctype.h>
 
  /**
-  * last_index - return the last index of a string
+  * last_index - Function that return the last index of a string
   * @s: pointer to string
   *
   * Return: int
@@ -12,6 +12,7 @@
 
 int is_palindrome(char *s);
 int check(char *s, int start, int end, int mod);
+
 int last_index(char *s)
 {
 	int n = 0;
@@ -19,6 +20,7 @@ int last_index(char *s)
 		n += last_index(s + 1) + 1;
 	return (n);
 }
+
 /**
  * is_palindrome - Checks if a string is a palindrome.
  * @s: The string to check.
