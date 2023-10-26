@@ -8,13 +8,18 @@
  * Return: the square root of num, -1 otherwise.
  */
 
-int _sqrt_helper(int n, int guess)
+int _sqrt_helper(int n, int guess, int min, int max)
 {
 	if (guess * guess == n)
 		return (guess);
-	if (guess <= 1)
+	if (min > max)
 		return (-1);
-	return (_sqrt_helper(n, guess - 1));
+	int mid = (min + max) / 2;
+	if (mid * mid == n)
+		return (mid);
+	if (mid * mid > n)
+		return (_sqrt_helper(n, guess, min, mid - 1));
+	return (_sqrt_helper(n, mid, mid + 1, max));
 }
 
 /**
@@ -30,5 +35,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0 || n == 1)
 		return (n);
-	return (_sqrt_helper(n, n / 2));
+	return (_sqrt_helper(n, n / 2, 0, n));
 }
