@@ -2,33 +2,33 @@
 
 /**
  * _sqrt_helper - Helper function to find the square root using recursion.
- * @n: The number for which to calculate the square root.
- * @guess: The current guess for the square root.
+ * @n: The number we want to calculate it square.
+ * @guess: the guess for the square root.
  *
- * Return: The natural square root of the number, or -1 otherwise
+ * Return: the square root of num, -1 otherwise.
  */
 
 int _sqrt_helper(int n, int guess)
 {
 	if (guess * guess == n)
-		return guess; /* Found the square root */
-	if (guess <= 0)
-		return -1; /* The number is not a perfect square, return -1 */
-	return (_sqrt_helper(n, guess - 1));
+		return (guess);
+	if (guess <= 1)
+		return (-1);
+	return _sqrt_helper(n, guess - 1);
 }
 
 /**
  * _sqrt_recursion - Calculates the natural square root of a number.
  * @n: The number for which to calculate the square root.
  *
- * Return: The natural square root of the number, or -1 otherwise.
+ * Return: the natural square root, -1 otherwise.
  */
 
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
-		return (-1); /* Square root is not defined for negative numbers */
+		return (-1);
 	if (n == 0 || n == 1)
-		return (n); /* Base cases: sqrt(0) = 0 and sqrt(1) = 1 */
+		return (n);
 	return (_sqrt_helper(n, n / 2));
-}
+}		
