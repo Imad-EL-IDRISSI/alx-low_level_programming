@@ -8,7 +8,7 @@
  * Return: the square root of num, -1 otherwise.
  */
 
-int _sqrt_helper(int n, int guess, int min, int max)
+int _sqrt_helper(int n, int guess)
 {
 	if (guess * guess == n)
 		return (guess);
