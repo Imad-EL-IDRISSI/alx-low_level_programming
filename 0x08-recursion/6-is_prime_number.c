@@ -1,4 +1,4 @@
-#include"main.h"ç
+#include"main.h"
 
 /**
  * is_prime_helper - Helper function to check primality using recursion.
