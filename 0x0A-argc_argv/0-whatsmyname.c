@@ -1,23 +1,13 @@
 #include <stdio.h>
-#include <libgen.h>
-#include <string.h>
-#include <stdlib.h>
 
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * main - prints its name, followed by a new line.
+ * @argc: number of command line arguments.
+ * @argv: array that contains the program command line arguments.
+ * Return: 0 - success.
  */
-
-int main (int argc, char *argv[])
+int main(int argc __attribute__((unused)), char *argv[])
 {
-	char *program_name = stdrup(basename(argv[0]));
-
-	if (program_name != NULL)
-	{
-		printf("%s\n", program_name);
-		free(program_name);
-		return (0);
-	}
-	return (1); // Error case
+    printf("%s\n", argv[0]);
+    return (0);
 }
