@@ -1,21 +1,25 @@
+#include "notrebloh.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * free_grid - Free a 2-dimensional grid.
- * @grid: The grid to be freed.
- * @height: The height of the grid.
+ * free_grid - function to free memory
+ * @grid: pointer to grid of int type
+ * @height: int type
+ * Return: clean up memory
  */
+
 void free_grid(int **grid, int height)
 {
-	int i;
+	int y;
 
-	if (grid == NULL) return;
-	
-	for (i = 0; i < height; i++)
-    {
-        if (grid[i] != NULL)
-            free(grid[i]);
-    }
-
-    free(grid);
+	if (grid == NULL || grid == 0)
+	{
+		return;
+	}
+	for (y = 0; y < height;  y++)
+	{
+		free(grid[y]);
+	}
+	free(grid);
 }
