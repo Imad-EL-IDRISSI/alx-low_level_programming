@@ -11,5 +11,5 @@ int main(void)
 			    index = linear_search(array, size, value);
 			        printf("Value %d found at index %d\n", value, index);
 
-				    return 0;
+				    return (0);
 }
